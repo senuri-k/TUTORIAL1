@@ -11,6 +11,11 @@ public class ProductService {
     private List<Product> products = new ArrayList<>();
     private Long nextId = 1L;
 
+    public ProductService() {
+        products.add(new DigitalProduct(nextId++,"E-book",99.9,"/url/",34));
+        products.add(new PhysicalProduct(nextId++,"keyboard",234.4,2.9,"2*3*4"));
+    }
+
     public List<Product> getAllProducts(){
         return products;
     }

@@ -38,4 +38,11 @@ public class ProductService {
                 .filter(p ->p.getName().contains(name))
                 .toList();
     }
+    public List<String> getAllSummaries(){
+        List<String> summaries = new ArrayList<>();
+        for (Product product : products){
+            summaries.add(product.getSummary());
+        }
+        return summaries;
+    }
 }
